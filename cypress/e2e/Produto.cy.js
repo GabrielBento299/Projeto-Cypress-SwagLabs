@@ -1,26 +1,26 @@
 /// <reference types="cypress" />
 
-describe('Teste funcional de produtos', () => {
+describe('Products Test', () => {
     beforeEach(() => {
-        cy.visit('https://www.saucedemo.com/');
+        cy.visit('/');
 
         cy.login('standard_user', 'secret_sauce');
     });
 
-    it('Deve adicionar um produto produto ao carrinho com sucesso', () => {
-        cy.addProdutoCarrinho();
+    it('should add a product to cart successfully', () => {
+        cy.addProductCart();
         
         cy.get('.shopping_cart_badge').should('have.text', 1);
     });
 
-    it('Deve Adicionar todos os produtos ao carrinho com sucesso', () => {
-        cy.addProdutosCarrinho();
+    it('should add all products to cart successfully', () => {
+        cy.addAllProductsCart();
 
         cy.get('.shopping_cart_badge').should('have.text', 6);
     });
 
-    it('Deve fazer a compra de um produto com sucesso', () => {
-        cy.addProdutoCarrinho();
+    it('should successfully purchase a product', () => {
+        cy.addProductCart();
 
         cy.get('.shopping_cart_link').click();
         
@@ -36,8 +36,8 @@ describe('Teste funcional de produtos', () => {
         cy.get('.complete-text').should('have.text', 'Your order has been dispatched, and will arrive just as fast as the pony can get there!');
     });
 
-    it('Deve fazer a compra de todos os produto com sucesso', () => {
-        cy.addProdutosCarrinho();
+    it('should successfully purchase all product', () => {
+        cy.addAllProductsCart();
 
         cy.get('.shopping_cart_link').click();
         cy.get('[data-test="checkout"]').click();

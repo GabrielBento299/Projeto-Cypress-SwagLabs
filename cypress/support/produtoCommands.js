@@ -1,4 +1,4 @@
-Cypress.Commands.add('addProdutoCarrinho', () => {
+Cypress.Commands.add('addProductCart', () => {
     cy.get('.inventory_item')
         .last().children()
         .find('img').click();
@@ -8,7 +8,7 @@ Cypress.Commands.add('addProdutoCarrinho', () => {
 
 });
 
-Cypress.Commands.add('addProdutosCarrinho', () => {
+Cypress.Commands.add('addAllProductsCart', () => {
     cy.get('.btn_primary').each(($el) => {
         cy.wrap($el).click();
     });
