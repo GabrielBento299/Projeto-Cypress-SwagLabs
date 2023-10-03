@@ -2,7 +2,7 @@
 
 describe('Teste funcional de login', () => {
     beforeEach(() => {
-        cy.visit('https://www.saucedemo.com/');
+        
     });
 
     it('Deve fazer login com sucesso', () => {

@@ -3,6 +3,7 @@
 describe('Teste funcional de produtos', () => {
     beforeEach(() => {
         cy.visit('https://www.saucedemo.com/');
+        cy.screenshot();
 
         cy.login('standard_user', 'secret_sauce');
     });
