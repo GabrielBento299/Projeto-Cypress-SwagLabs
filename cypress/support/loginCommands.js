@@ -1,9 +1,12 @@
-Cypress.Commands.add('login', (usuario, senha) => {
-    cy.visit('https://www.saucedemo.com/');
-    
-    if(usuario && senha) {
-        cy.get('[data-test="username"]').type(usuario);
-        cy.get('[data-test="password"]').type(senha);    
+Cypress.Commands.add('login', (email, password) => {
+    cy.visit('/');
+
+    if (email) {
+        cy.get('[data-test="username"]').type(email);
+    }
+
+    if (password) {
+        cy.get('[data-test="password"]').type(password);    
     }
  
     cy.get('[data-test="login-button"]').click();  
