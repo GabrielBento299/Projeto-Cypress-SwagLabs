@@ -6,10 +6,15 @@ Cypress.Commands.add('login', (email, password) => {
     }
 
     if (password) {
-        cy.get('[data-test="password"]').type(password);    
+        cy.get('[data-test="password"]').type(password, { log: false });    
     }
  
     cy.get('[data-test="login-button"]').click();  
+});
+
+Cypress.Commands.add('loginCookie', () => {
+    cy.setCookie('session-username', Cypress.env('USERNAME'));
+    cy.visit('/inventory.html', { failOnStatusCode: false });
 });
 
 Cypress.Commands.add('logout', () => {
@@ -32,7 +37,6 @@ Cypress.Commands.add('addProductCart', () => {
 
     cy.get('.btn_primary').click();
     cy.get('.inventory_details_desc_container .btn_secondary').should('have.text', 'Remove');
-
 });
 
 Cypress.Commands.add('addAllProductsCart', () => {
@@ -40,3 +44,15 @@ Cypress.Commands.add('addAllProductsCart', () => {
         cy.wrap($el).click();
     });
 });
+
+Cypress.Commands.add('removeProduct', () => {
+    cy.contains('button', 'Remove').click();
+});
+
+Cypress.Commands.add('removeAllProducts', () => {
+    cy.get('.btn_secondary').each(($el) => {
+        cy.wrap($el).click();
+    });
+});
+
+

@@ -2,7 +2,7 @@
 
 describe('Products Test', () => {
     beforeEach(() => {
-        cy.login('standard_user', 'secret_sauce');
+        cy.loginCookie();
     });
 
     it('should successfully purchase a product', () => {
