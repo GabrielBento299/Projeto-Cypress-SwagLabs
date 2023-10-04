@@ -17,7 +17,7 @@ Cypress.Commands.add('logout', () => {
     cy.contains('.bm-item-list a', 'Logout').click();
 });
 
-Cypress.Commands.add('cadastroInfos', () => {
+Cypress.Commands.add('registrationInfos', () => {
     cy.get('[data-test="firstName"]').type('Teste');
     cy.get('[data-test="lastName"]').type('Teste da Silva');
     cy.get('[data-test="postalCode"]').type('123456');
