@@ -13,7 +13,7 @@ Cypress.Commands.add('login', (email, password) => {
 });
 
 Cypress.Commands.add('loginCookie', () => {
-    cy.setCookie('session-username', Cypress.env('USERNAME'));
+    cy.setCookie('session-username', Cypress.env('USER_EMAIL'));
     cy.visit('/inventory.html', { failOnStatusCode: false });
 });
 
