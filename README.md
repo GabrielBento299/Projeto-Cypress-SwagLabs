@@ -18,3 +18,4 @@ link do site: https://www.saucedemo.com/
 - Fazer a compra de um produto
 - Fazer compra de todos os produtos
 
+![teste](https://github.com/GabrielBento299/Projeto-Cypress-cypress-SwagLabs/assets/86307663/05d96dc3-9d1d-4283-9947-d49a6ba73957)
