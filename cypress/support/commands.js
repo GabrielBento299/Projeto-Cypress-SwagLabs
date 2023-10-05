@@ -23,8 +23,8 @@ Cypress.Commands.add('logout', () => {
 });
 
 Cypress.Commands.add('registrationInfos', () => {
-    cy.get('[data-test="firstName"]').type('Teste');
-    cy.get('[data-test="lastName"]').type('Teste da Silva');
+    cy.get('[data-test="firstName"]').type('Gabriel');
+    cy.get('[data-test="lastName"]').type('Bento');
     cy.get('[data-test="postalCode"]').type('123456');
     
     cy.get('[data-test="continue"]').click();
@@ -57,5 +57,4 @@ Cypress.Commands.add('removeAllProducts', () => {
 
 Cypress.Commands.add('messageError', message => {
     cy.get('[data-test="error"]').should('be.visible').and('have.text', message);
-
 });
