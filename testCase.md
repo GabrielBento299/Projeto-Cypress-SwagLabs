@@ -1,16 +1,81 @@
-Funcionalidade de Extrato:
+Funcionalidade de Carrinho:
 
-      Cenário: Exibir saldo disponível no momento
-      Dado que estou logado na minha conta bancária
-      Quando acesso a funcionalidade de extrato
-      Então devo ver o saldo disponível no momento
-      
-      Cenário: Exibir "-" quando a transação for sem comentário
-      Dado que tenho uma transação sem comentário na minha conta bancária
-      Quando acesso a funcionalidade de extrato
-      Então devo ver "-" como comentário dessa transação
-      
-      Cenário: Exibir detalhes de transação
-      Dado que tenho transações na minha conta bancária
-      Quando acesso a funcionalidade de extrato
-      Então devo ver a data, tipo de transação e valor de cada transação listada
+    Cenário: Adicionar um produto ao carrinho com sucesso
+    Dado que tenha um produto disponível na loja
+    Quando eu adiciono um produto ao carrinho
+    Então o produto deve ser exibido no meu carrinho
+    E o total de itens no meu carrinho deve ser atualizado
+
+    Cenário: Adicionar todos os produtos ao carrinho com sucesso
+    Dado que tenha produtos disponíveis na loja
+    Quando eu adiciono todos os produtos ao meu carrinho
+    Então todos os produtos devem ser exibidos no meu carrinho
+    E o total de itens no meu carrinho deve ser atualizado corretamente
+
+    Cenário: Remover um produto do carrinho com sucesso
+    Dado que eu tenha um produto no meu carrinho
+    Quando eu removo o produto do meu carrinho
+    Então o produto deve ser removido do meu carrinho
+    E o total de itens no meu carrinho deve ser atualizado corretamente
+
+    Cenário: Remover todos os produtos do carrinho com sucesso
+    Dado que eu tenha produtos no meu carrinho
+    Quando eu removo todos os produtos do meu carrinho
+    Então os produtos deve ser removido do meu carrinho
+    E o total de itens no meu carrinho deve ser atualizado corretamente
+
+<------------------------------------------------------------------------------><------------------------------------------------------------------------->
+
+
+Funcionalidade de Links:
+
+    Cenário: Abrir links e ser redirecionado para cada um deles com sucesso
+    Dado que eu tenha links disponíveis para acesasr
+    Quando eu clico em cada um dos links
+    Então devo ser redirecionado para a página correspondente com sucesso
+    
+<------------------------------------------------------------------------------><------------------------------------------------------------------------->
+
+
+Funcionalidade de Login:
+
+    Cenário: Deve fazer login com sucesso
+    Dado que estou na página de login
+    Quando insiro um usuário e senha válidos
+    Então devo ser redirecionado para a página inicial
+    E devo ver uma mensagem de boas-vindas
+
+    Cenário: Deve exibir uma mensagem de erro ao inserir usuário inválido
+    Dado que estou na página de login
+    Quando insiro um usuário inválido
+    E insiro uma senha válida
+    Então devo ver uma mensagem de erro indicando que o usuário é inválido
+
+    Cenário: Deve exibir uma mensagem de erro ao inserir uma senha inválida
+    Dado que estou na página de login
+    Quando insiro um usuário válido
+    E insiro uma senha inválida
+    Então devo ver uma mensagem de erro indicando que a senha é inválida
+
+
+    Cenário: Deve exibir uma mensagem de erro ao não preencher o e-mail
+    Dado que estou na página de login
+    Quando não insiro um e-mail
+    E insiro uma senha válida
+    Então devo ver uma mensagem de erro indicando que o e-mail é obrigatório
+
+    Cenário: Deve exibir uma mensagem de erro ao não preencher a senha
+    Dado que estou na página de login
+    Quando insiro um e-mail válido
+    E não insiro uma senha
+    Então devo ver uma mensagem de erro indicando que a senha é obrigatória   
+    
+    Cenário: Deve exibir mensagem de erro ao não preencher o campo email e senha
+    Dado que estou na página de login
+    Quando não insiro um e-mail
+    E não insiro uma senha
+    Então devo ver mensagens de erro indicando que o e-mail e a senha são obrigatórios
+
+<------------------------------------------------------------------------------><------------------------------------------------------------------------->
+
+
