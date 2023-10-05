@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('Teste funcional de login', () => {
+describe('Login Test', () => {
     const email = Cypress.env('USER_EMAIL');
     const password = Cypress.env('USER_PASSWORD');
     it('should login with successfully', () => {
