@@ -1,6 +1,9 @@
 Funcionalidade de Carrinho:
+
 Como um cliente interessado em comprar produtos,
+<br />
 Quero ser capaz de adicionar itens de qualquer quantidade ao meu carrinho e removê-los conforme necessário,
+<br />
 para que eu possa revisar e finalizar minha compra com facilidade.
 
     Cenário: Adicionar um produto ao carrinho com sucesso
@@ -31,8 +34,11 @@ para que eu possa revisar e finalizar minha compra com facilidade.
 
 
 Funcionalidade de Links:
+
 Como um cliente do sistema,
+<br />
 Quero  ser capaz de clicar nos links Disponíveis,
+<br />
 para ser redirecionado  as páginas correspondentes, a fim de acessar informações específicas ou realizar ações desejadas.
 
     Cenário: Abrir links e ser redirecionado para cada um deles com sucesso
@@ -44,8 +50,11 @@ para ser redirecionado  as páginas correspondentes, a fim de acessar informaç�
 
 
 Funcionalidade de Login:
+
 Como um cliente do sistema, 
+<br />
 Quero poder fazer login (autenticação),
+<br />
 para garantir a segurança do meu acesso e receber feedback claro em caso de erros.
 
     Cenário: Deve fazer login com sucesso
@@ -88,8 +97,11 @@ para garantir a segurança do meu acesso e receber feedback claro em caso de err
 
 
 Funcionalidade de Logout:
+
 Como um usuário logado (autenticado), 
+<br />
 Quero ter a opção de encerrar minha sessão de forma segura,
+<br />
 para proteger minha conta e garantir que ninguém mais tenha acesso às minhas informações.
 
     Cenário: Deve sair com sucesso
@@ -101,8 +113,11 @@ para proteger minha conta e garantir que ninguém mais tenha acesso às minhas i
 
 
 Funcionalidade de Ordenação:
+
 Como um cliente do sistema,
+<br />
 Quero poder ordenar os produtos de diferentes maneiras, 
+<br />
 para que eu possa encontrar facilmente o que estou procurando.
 
     Cenário: Deve pedir pelo preço do maior para o menor
@@ -129,8 +144,11 @@ para que eu possa encontrar facilmente o que estou procurando.
 
 
 Funcionalidade de Produtos:
+
 Como um cliente que deseja adquirir produtos, 
-eu quero ter a capacidade de comprar um produto individualmente ou todos os produtos do meu carrinho de uma vez,
+<br />
+Quero ter a capacidade de comprar um produto ou todos os produtos do meu carrinho de uma vez,
+<br />
 para economizar tempo e finalizar minhas compras de forma eficaz.
 
     Cenário: Deve comprar um produto com sucesso
