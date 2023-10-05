@@ -1,8 +1,10 @@
 /// <reference types="cypress" />
 
 describe('Teste funcional de login', () => {
+    const email = Cypress.env('USER_EMAIL');
+    const password = Cypress.env('USER_PASSWORD');
     it('should login with successfully', () => {
-        cy.login('standard_user', 'secret_sauce');
+        cy.login(email, password);
 
         cy.url().should('be.equal', `${Cypress.config('baseUrl')}inventory.html`);
         cy.get('.header_secondary_container .title')
@@ -11,31 +13,33 @@ describe('Teste funcional de login', () => {
     });
 
     it('Should display an error message when entering invalid user', () => {
-        cy.login('teste', 'secret_sauce');
-         
-        cy.get('[data-test="error"]').contains('Epic sadface: Username and password do not match any user in this service').should('be.visible');
+        cy.login('teste', password);
+
+        cy.messageError('Epic sadface: Username and password do not match any user in this service');
     });
 
     it('Should display an error message when entering invalid password', () => {
-        cy.login('standard_user', 'teste123');
-         
-        cy.get('[data-test="error"]').contains('Epic sadface: Username and password do not match any user in this service').should('be.visible');
+        cy.login(email, 'teste123');
+
+        cy.messageError('Epic sadface: Username and password do not match any user in this service');
     });
 
     it('should display an error message when not filling in the email', () => {
-        cy.login('', 'teste123');
-
-        cy.get('[data-test="error"]').contains('Epic sadface: Username is required').should('be.visible');
+        cy.login('', password);
+        
+        cy.messageError('Epic sadface: Username is required');
     });
+
     it('should display an error message when not filling in the password', () => {
-        cy.login('email@teste.com', '');
+        cy.login(email, '');
 
-        cy.get('[data-test="error"]').contains('Epic sadface: Password is required').should('be.visible');
+        cy.messageError('Epic sadface: Password is required');
     });
+
     it('should display an error message when not filling in the email field and password', () => {
         cy.login('', '');
 
-        cy.get('[data-test="error"]').contains('Epic sadface: Username is required').should('be.visible');
+        cy.messageError('Epic sadface: Username is required');
     });
 });
 

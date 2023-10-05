@@ -55,4 +55,7 @@ Cypress.Commands.add('removeAllProducts', () => {
     });
 });
 
+Cypress.Commands.add('messageError', message => {
+    cy.get('[data-test="error"]').should('be.visible').and('have.text', message);
 
+});
