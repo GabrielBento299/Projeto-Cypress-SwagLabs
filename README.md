@@ -2,6 +2,8 @@
 
 ### [Site ultilizado para os testes]( https://www.saucedemo.com/)
 
+## Caso de Teste com GHERKIN: [TestCase](testCase.md)
+
 <hr />
 
 ## Funcionalidade de Carrinho
