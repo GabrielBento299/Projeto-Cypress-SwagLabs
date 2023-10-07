@@ -26,7 +26,7 @@
 - ✔ Deve exibir uma mensagem de erro ao não preencher o e-mail
 - ✔ Deve exibir uma mensagem de erro ao não preencher a senha
 - ✔ Deve exibir mensagem de erro ao não preencher o campo email e senha
-- 
+  
 ![login cy js](https://github.com/GabrielBento299/Projeto-Cypress-cypress-SwagLabs/assets/86307663/ee3f1233-3261-4825-ae78-3590fb3ccdc0)
 
 
